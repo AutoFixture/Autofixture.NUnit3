@@ -3,7 +3,7 @@
   <Import Project="..\..\Common.Test.props" />
 
   <PropertyGroup>
-    <TargetFrameworks>net462;net48;net5.0;net6.0</TargetFrameworks>
+    <TargetFrameworks>net462;net48;net6.0</TargetFrameworks>
     <AssemblyTitle>AutoFixture.NUnit3.UnitTest</AssemblyTitle>
     <AssemblyName>AutoFixture.NUnit3.UnitTest</AssemblyName>
     <RootNamespace>AutoFixture.NUnit3.UnitTest</RootNamespace>
@@ -18,7 +18,6 @@
       <ItemGroup>
         <PackageReference Include="NUnit" Version="[3.14.0]" SkipGetTargetFrameworkProperties="true" SetTargetFramework="TargetFramework=netstandard2.0" />
 
-        <ProjectReference Include="..\AutoFixture\AutoFixture.csproj" SkipGetTargetFrameworkProperties="true" SetTargetFramework="TargetFramework=netstandard2.0" />
         <ProjectReference Include="..\AutoFixture.NUnit3\AutoFixture.NUnit3.csproj" SkipGetTargetFrameworkProperties="true" SetTargetFramework="TargetFramework=netstandard2.0" />
         <ProjectReference Include="..\TestTypeFoundation\TestTypeFoundation.csproj" SkipGetTargetFrameworkProperties="true" SetTargetFramework="TargetFramework=netstandard2.0" />
       </ItemGroup>
@@ -27,7 +26,6 @@
       <ItemGroup>
         <PackageReference Include="NUnit" Version="[3.14.0]" />
 
-        <ProjectReference Include="..\AutoFixture\AutoFixture.csproj" />
         <ProjectReference Include="..\AutoFixture.NUnit3\AutoFixture.NUnit3.csproj" />
         <ProjectReference Include="..\TestTypeFoundation\TestTypeFoundation.csproj" />
       </ItemGroup>

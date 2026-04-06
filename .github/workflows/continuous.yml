@@ -17,6 +17,9 @@
 name: continuous
 
 on:
+  push:
+    branches:
+      - main
   pull_request:
     branches:
       - master
@@ -33,15 +36,7 @@ jobs:
       - uses: actions/setup-dotnet@v4
         with:
           dotnet-version: |
-            5.0.x
             6.0.x
-      - name: Cache .nuke/temp, ~/.nuget/packages
-        uses: actions/cache@v4
-        with:
-          path: |
-            .nuke/temp
-            ~/.nuget/packages
-          key: ${{ runner.os }}-${{ hashFiles('**/global.json', '**/*.csproj') }}
       - name: Run './build.cmd Verify Cover Pack'
         run: ./build.cmd Verify Cover Pack --no-logo
         env:
